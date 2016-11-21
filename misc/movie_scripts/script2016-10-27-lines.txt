@@ -1,0 +1,47 @@
+Presentation 2016-10-27
+"Interviews" script - broken down by actor
+
+
+
+    === TOMASZ ===
+
+1.    
+Our task is to deliver crates to disaster victims. We have a drone that can pick up the crates, but it can't deliver it far. We have a ground robot that can drive the crates far, but can't pick them up!
+
+2.
+The robots move independently of one another, each one depends only on the central scheduler. We call this architecture, of course, Skynet.
+
+3.
+We are truly living in the future.
+
+4.
+It was partly for logistical reasons; we had a limited amount of robots, and had to split them over two campuses. But it was also because, well, it's stupid to do the same work twice, right?
+
+5.
+Our system could theoretically handle more than one robot of each type, but there are of course budgetary and logistical constraints. Also, if we had several aerial drones they would probably fly into each other.
+
+
+    === TOMMY ===
+1.
+This here turtlebot represents the unmanned ground vehicle. It has an internal map, which places the origin at where it was when it was booted up.
+
+
+    === SOME DRONE GUY ===
+1.
+This is an ARDrone. It can fly.
+
+2.
+So we use PID controllers for the position and angle, with the objective of keeping the drone still. As long as we have a reliable source telling us the drone's position, we can make it navigate to any position and hover in place.
+
+3.
+What we do is we feed the deviation from the target destination into the controller, and the drone then tries to correct the position, and so it moves to where we want it to be.
+
+
+    ==== SAMUEL ====
+1.
+We use camera-based SLAM, so the drone controller gets a feed of the drone's position based on what it can see. It loses track if it moves too fast, but usually it's fine.
+
+
+
+
+
